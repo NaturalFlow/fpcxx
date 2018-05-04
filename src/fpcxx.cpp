@@ -3,7 +3,7 @@
 template<typename T, typename F>
 std::vector<T> map(const std::vector<T>& data, F func) {
     std::vector<T> transformedData(data.size());
-    std::transform(data.begin(), data.end(),back_insert(transformedData),func);
+    std::transform(data.begin(), data.end(),back_inserter(transformedData),func);
     return transformedData;
 }
 template<typename T, typename F>
